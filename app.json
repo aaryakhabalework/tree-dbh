@@ -1,25 +1,57 @@
 {
   "expo": {
-    "name": "tree-dbh",
+    "name": "TreeDBH",
     "slug": "tree-dbh",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
+    "userInterfaceStyle": "dark",
+    "scheme": "treedbh",
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router",
+      "expo-dev-client",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow TreeDBH to save measurement photos.",
+          "savePhotosPermission": "Allow TreeDBH to save measurement photos."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow TreeDBH to access your photos."
+        }
+      ]
+    ],
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "monochromeImage": "./assets/android-icon-monochrome.png",
+        "backgroundColor": "#0A1A0A"
       },
-      "predictiveBackGestureEnabled": false
+      "package": "com.treedbh.app",
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.treedbh.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "TreeDBH needs your camera to measure tree diameter using computer vision.",
+        "NSPhotoLibraryUsageDescription": "TreeDBH saves measurement results to your photo library."
+      }
     }
   }
 }
