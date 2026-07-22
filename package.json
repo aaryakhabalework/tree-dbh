@@ -1,6 +1,7 @@
 {
   "name": "tree-dbh",
   "version": "1.0.0",
+<<<<<<< HEAD
   "main": "expo-router/entry",
   "dependencies": {
     "@shopify/react-native-skia": "2.6.2",
@@ -30,13 +31,30 @@
   "devDependencies": {
     "@types/react": "~19.2.2",
     "babel-preset-expo": "^57.0.3",
+=======
+  "main": "index.ts",
+  "dependencies": {
+    "expo": "~57.0.7",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-native": "0.86.0"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+>>>>>>> dec77e7 (Initial commit)
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
+<<<<<<< HEAD
     "android": "expo run:android",
     "dev": "expo start --dev-client",
     "prebuild": "expo prebuild --clean"
+=======
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+>>>>>>> dec77e7 (Initial commit)
   },
   "private": true
 }

@@ -1,6 +1,7 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+<<<<<<< HEAD
     "strict": true,
     "baseUrl": ".",
     "paths": {
@@ -10,5 +11,8 @@
     "strictNullChecks": true,
     "esModuleInterop": true,
     "ignoreDeprecations": "6.0"
+=======
+    "strict": true
+>>>>>>> dec77e7 (Initial commit)
   }
 }
